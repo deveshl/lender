@@ -4,6 +4,8 @@ public class Loan {
     private boolean isPaid;
     private double interestRate;
 
+    private static int maxLoanValue;
+
     static private double maxLoanAmount;
 
     public static double getMaxLoanAmount() {
@@ -18,6 +20,10 @@ public class Loan {
         if (this.amount > maxLoanAmount) {
             maxLoanAmount = this.amount;
         }
+    }
+
+    public static int getMaxLoanValue() {
+        return maxLoanValue;
     }
 
     public void setAsPaid() {
